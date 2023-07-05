@@ -6,7 +6,7 @@ En esta actividad deberá aplicar todos los conocimientos adquiridos a lo largo 
 
 Utilizando el lenguaje JavaScript desarrollar un programa que dé solución a los siguientes problemas:   
 
-1. Desarrollar un programa que permita calcular el área o perímetro de algunas figuras planas según la siguiente tabla:            GFPI-F-135 V01       
+1. Desarrollar un programa que permita calcular el área o perímetro de algunas figuras planas según la siguiente tabla:     
 
 Tabla 1  Área y perímetro de figuras planas
 
