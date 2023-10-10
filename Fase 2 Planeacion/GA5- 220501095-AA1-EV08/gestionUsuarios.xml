@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- Encabezado -->
+    <include layout="@layout/header" />
+
+    <!-- Contenido Principal -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <!-- Título -->
+            <TextView
+                android:id="@+id/tvUserManagementTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Lista de Usuarios"
+                android:textSize="24sp"
+                android:textColor="#267FFC"
+                android:gravity="center"
+                android:padding="16dp" />
+
+            <!-- Tabla de Usuarios -->
+            <TableLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:stretchColumns="1">
+
+                <TableRow>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="ID"
+                        android:padding="8dp"
+                        android:background="#267FFC"
+                        android:textColor="#FFFFFF" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Nombre"
+                        android:padding="8dp"
+                        android:background="#267FFC"
+                        android:textColor="#FFFFFF" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Email"
+                        android:padding="8dp"
+                        android:background="#267FFC"
+                        android:textColor="#FFFFFF" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Rol"
+                        android:padding="8dp"
+                        android:background="#267FFC"
+                        android:textColor="#FFFFFF" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Acciones"
+                        android:padding="8dp"
+                        android:background="#267FFC"
+                        android:textColor="#FFFFFF" />
+                </TableRow>
+
+                <!-- Aquí se mostrarán los usuarios -->
+                <TableRow>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="2"
+                        android:padding="8dp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Usuario 2"
+                        android:padding="8dp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="usuario1@email.com"
+                        android:padding="8dp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Cliente"
+                        android:padding="8dp" />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Ver Detalles"
+                            android:textColor="#267FFC"
+                            android:padding="8dp"
+                            android:background="#FFFFFF" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text=" | "
+                            android:textColor="#267FFC"
+                            android:padding="8dp"
+                            android:background="#FFFFFF" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Editar"
+                            android:textColor="#267FFC"
+                            android:padding="8dp"
+                            android:background="#FFFFFF" />
+
+                        <TextView
+                            android:layout_width="wrap-content"
+                            android:layout_height="wrap_content"
+                            android:text=" | "
+                            android:textColor="#267FFC"
+                            android:padding="8dp"
+                            android:background="#FFFFFF" />
+
+                        <TextView
+                            android:layout_width="wrap-content"
+                            android:layout_height="wrap_content"
+                            android:text="Eliminar"
+                            android:textColor="#267FFC"
+                            android:padding="8dp"
+                            android:background="#FFFFFF" />
+                    </LinearLayout>
+                </TableRow>
+
+                <!-- Puedes agregar más filas de usuarios aquí -->
+
+            </TableLayout>
+        </LinearLayout>
+    </ScrollView>
+
+    <!-- Pie de Página -->
+    <include layout="@layout/footer" />
+
+</RelativeLayout>

@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- Encabezado -->
+    <include layout="@layout/header" />
+
+    <!-- Contenido Principal -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <!-- Título del Historial de Compras -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Tu Historial de Compras"
+                android:textSize="24sp"
+                android:textColor="#267FFC"
+                android:padding="16dp" />
+
+            <!-- Compra 1 -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="#FFFFFF"
+                android:layout_margin="16dp"
+                android:elevation="2dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Fecha de Compra: 2023-08-15"
+                    android:textSize="18sp"
+                    android:padding="16dp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Productos:"
+                    android:textSize="16sp"
+                    android:paddingStart="16dp"
+                    android:paddingEnd="16dp"
+                    android:paddingTop="8dp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Producto 1 - $20.99\nProducto 2 - $15.49"
+                    android:textSize="16sp"
+                    android:paddingStart="32dp"
+                    android:paddingEnd="16dp"
+                    android:paddingTop="4dp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Total: $36.48"
+                    android:textSize="18sp"
+                    android:padding="16dp" />
+            </LinearLayout>
+
+            <!-- Repite esta estructura para cada compra en el historial -->
+
+        </LinearLayout>
+    </ScrollView>
+
+    <!-- Pie de Página -->
+    <include layout="@layout/footer" />
+
+</RelativeLayout>

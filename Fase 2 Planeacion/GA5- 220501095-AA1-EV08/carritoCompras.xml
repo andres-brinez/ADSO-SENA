@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- Encabezado -->
+    <include layout="@layout/header" />
+
+    <!-- Contenido Principal -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <!-- Sección del Carrito -->
+            <RelativeLayout
+                android:id="@+id/cartSection"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#FFFFFF"
+                android:padding="16dp">
+
+                <TextView
+                    android:id="@+id/tvCartTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Carrito de Compras"
+                    android:textSize="24sp"
+                    android:textColor="#267FFC"
+                    android:layout_centerHorizontal="true" />
+
+                <TableLayout
+                    android:id="@+id/cartTable"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/tvCartTitle"
+                    android:layout_marginTop="16dp">
+
+                    <TableRow>
+                        <th>Producto</th>
+                        <th>Cantidad</th>
+                        <th>Precio Unitario</th>
+                        <th>Total</th>
+                        <th>Acciones</th>
+                    </TableRow>
+
+                    <!-- Filas del Carrito -->
+                    <include layout="@layout/cart_item" />
+                    <include layout="@layout/cart_item" />
+                </TableLayout>
+
+                <TextView
+                    android:id="@+id/tvTotal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Total: $25.00"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:layout_centerHorizontal="true"
+                    android:layout_below="@id/cartTable"
+                    android:layout_marginTop="20dp" />
+
+                <Button
+                    android:id="@+id/btnCheckout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Proceder al Pago"
+                    android:textSize="16sp"
+                    android:textColor="#FFFFFF"
+                    android:background="#267FFC"
+                    android:layout_centerHorizontal="true"
+                    android:layout_below="@id/tvTotal"
+                    android:layout_marginTop="20dp" />
+            </RelativeLayout>
+        </LinearLayout>
+    </ScrollView>
+
+    <!-- Pie de Página -->
+    <include layout="@layout/footer" />
+
+</RelativeLayout>

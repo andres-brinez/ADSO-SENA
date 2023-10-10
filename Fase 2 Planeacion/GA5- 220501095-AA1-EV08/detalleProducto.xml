@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- Encabezado -->
+    <include layout="@layout/header" />
+
+    <!-- Contenido Principal -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <!-- Imagen del Producto -->
+            <ImageView
+                android:id="@+id/ivProductImage"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/product_image_placeholder" />
+
+            <!-- Nombre del Producto -->
+            <TextView
+                android:id="@+id/tvProductName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Nombre del Producto"
+                android:textSize="18sp"
+                android:padding="16dp" />
+
+            <!-- Precio del Producto -->
+            <TextView
+                android:id="@+id/tvProductPrice"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Precio: $XX.XX"
+                android:textSize="18sp"
+                android:padding="16dp" />
+
+            <!-- Descripción del Producto -->
+            <TextView
+                android:id="@+id/tvProductDescription"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Descripción del Producto"
+                android:textSize="16sp"
+                android:padding="16dp" />
+
+            <!-- Indicaciones -->
+            <TextView
+                android:id="@+id/tvProductIndications"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Indicaciones: Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+                android:textSize="16sp"
+                android:padding="16dp" />
+
+            <!-- Precauciones -->
+            <TextView
+                android:id="@+id/tvProductPrecautions"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Precauciones: Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+                android:textSize="16sp"
+                android:padding="16dp" />
+
+            <!-- Disponibilidad -->
+            <TextView
+                android:id="@+id/tvProductAvailability"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Disponibilidad: En Stock"
+                android:textSize="16sp"
+                android:padding="16dp" />
+
+            <!-- Productos Similares -->
+            <TextView
+                android:id="@+id/tvSimilarProducts"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Productos Similares: Producto 1, Producto 2, Producto 3"
+                android:textSize="16sp"
+                android:padding="16dp" />
+
+            <!-- Botón para Agregar al Carrito -->
+            <Button
+                android:id="@+id/btnAddToCart"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Agregar al Carrito"
+                android:layout_margin="16dp" />
+        </LinearLayout>
+    </ScrollView>
+
+    <!-- Pie de Página -->
+    <include layout="@layout/footer" />
+
+</RelativeLayout>

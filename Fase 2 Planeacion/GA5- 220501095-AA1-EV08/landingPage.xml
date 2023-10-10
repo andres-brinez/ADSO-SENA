@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- Encabezado -->
+    <include layout="@layout/header" />
+
+    <!-- Contenido Principal -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <!-- Sección del Héroe -->
+            <RelativeLayout
+                android:id="@+id/heroSection"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#267FFC"
+                android:padding="16dp">
+
+                <TextView
+                    android:id="@+id/tvWelcome"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Bienvenido a MediGood"
+                    android:textSize="24sp"
+                    android:textColor="#ffffff" />
+
+                <TextView
+                    android:id="@+id/tvTagline"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Tu farmacia en línea de confianza"
+                    android:textSize="16sp"
+                    android:textColor="#ffffff"
+                    android:layout_below="@id/tvWelcome"
+                    android:layout_marginTop="8dp" />
+
+                <Button
+                    android:id="@+id/btnExploreProducts"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Explora Nuestros Productos"
+                    android:textSize="16sp"
+                    android:textColor="#ffffff"
+                    android:layout_below="@id/tvTagline"
+                    android:layout_marginTop="16dp" />
+            </RelativeLayout>
+
+            <!-- Sección de Vista Previa de Productos -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <TextView
+                    android:id="@+id/tvPreviewTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Vista Previa de Productos Destacados"
+                    android:textSize="20sp"
+                    android:layout_gravity="center"
+                    android:layout_marginBottom="16dp" />
+
+                <!-- Lista de Productos Destacados -->
+                <include layout="@layout/product_preview" />
+                <include layout="@layout/product_preview" />
+                <include layout="@layout/product_preview" />
+                <include layout="@layout/product_preview" />
+            </LinearLayout>
+
+            <!-- Sección de Promociones Recientes -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <TextView
+                    android:id="@+id/tvPromotionsTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Promociones Recientes"
+                    android:textSize="20sp"
+                    android:layout_gravity="center"
+                    android:layout_marginBottom="16dp" />
+
+                <!-- Lista de Promociones Recientes -->
+                <include layout="@layout/promotion_preview" />
+                <include layout="@layout/promotion_preview" />
+                <include layout="@layout/promotion_preview" />
+                <include layout="@layout/promotion_preview" />
+            </LinearLayout>
+
+            <!-- Información de la Empresa -->
+            <include layout="@layout/company_info" />
+        </LinearLayout>
+    </ScrollView>
+
+    <!-- Pie de Página -->
+    <include layout="@layout/footer" />
+
+</RelativeLayout>
