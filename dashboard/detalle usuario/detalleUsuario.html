@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="../../static/style/dashboard.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+    <title>Detalle de Usuario</title>
+</head>
+
+<body>
+
+    <!-- Barra de navegación superior -->
+    <div class="top-nav">
+        <div class="left-section">
+            <div class="dashboard-icon" onclick="toggleSideNav()">
+                <!-- Icono de dashboard en formato SVG -->
+                <img src="../../static/img/hospital.png" alt="">
+            </div>
+            <div class="brand">MediGood</div>
+        </div>
+        <div class="user">Andres Briñez </div>
+    </div>
+
+    <!-- Contenido del Dashboard -->
+    <div class="dashboard-container">
+
+        <!-- Barra de navegación lateral -->
+        <nav class="side-nav">
+            <ul>
+                <li><a href="#"><i class="fas fa-shopping-cart"></i> Pedidos</a></li>
+                <li><a href="#"><i class="fas fa-shopping-bag"></i> Compras</a></li>
+                <li><a href="#"><i class="fas fa-user"></i> Perfil</a></li>
+                <li><a href="#"><i class="fas fa-users"></i> Usuarios</a></li>
+                <li><a href="#"><i class="fas fa-sign-out-alt"></i> Salir</a></li>
+            </ul>
+        </nav>
+
+        <!-- Contenido principal -->
+        <div class="main-content">
+            <div class="header">
+                <h2 class="title">Detalle de Usuario</h2>
+            </div>
+
+            <!-- Información del usuario -->
+            <div class="user-info">
+                <h3>Información</h3>
+
+                <label for="id">Id</label>
+                <p id="id">123456</p>
+
+                <label for="user-email">Correo Electrónico</label>
+                <p id="user-email">correo@ejemplo.com</p>
+
+                <label for="user-name">Nombre</label>
+                <p id="user-name">Nombre del Usuario</p>
+
+                <label for="user-phone">Teléfono</label>
+                <p id="user-phone">+1234567890</p>
+
+                <label for="user-address">Dirección</label>
+                <p id="user-address">Dirección del Usuario</p>
+
+                <label for="user-status">Estado</label>
+                <p id="user-status">Activo</p>
+
+                <label for="user-role">Rol</label>
+                <p id="user-role">Usuario</p>
+            </div>
+
+            <!-- Otras secciones de información específicas del usuario -->
+
+        </div>
+
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 Medigood - Todos los derechos reservados</p>
+    </footer>
+
+</body>
+
+</html>

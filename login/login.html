@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ingreso</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>static/
+    <header>
+        <div class="header-container">
+            <img class="header-logo" src="../static/img/logo.svg" alt="Logo de MediGood">
+            <h1>MediGood</h1>
+        </div>
+        <div class="header-container">
+            <p>Ingreso Seguro</p>
+            <img class="logo-security" src="../static/img/logoSecurity.svg" alt="Imagen de registro seguro">
+        </div>
+    </header>
+    <main>
+        <!-- Primer contenedor con el saludo de bienvenida -->
+        <div class="welcome-container">
+            <h3>¿Ya tienes cuenta?</h3>
+            <p><strong>¡Bienvenido de nuevo!</strong> Estamos emocionados de verte otra vez.<br>Por favor, inicia sesión
+                para continuar.</p>
+            <div class="back-to-shop">
+                <a href="ruta/a/la/tienda">
+                    <span>&lt;</span>
+                    <p>Volver a la tienda</p>
+                </a>
+            </div>
+        </div>
+
+        <!-- Segundo contenedor con el formulario de inicio de sesión -->
+        <div class="login-container">
+            <h3>Iniciar sesión</h3>
+            <div class="social-login">
+                <button id="button-facebook" type="button">
+                    <a href=""> <img src="../static/img/facebook.svg" alt="Facebook">
+                        Facebook</a>
+                </button>
+                <button id="button-google" type="button">
+                    <a href=""><img src="../static/img/google.svg" alt="Google">
+                        Google</a>
+                </button>
+            </div>
+            <div class="separator">
+                <div class="line"></div>
+                <p>O</p>
+                <div class="line"></div>
+            </div>
+            <form id="loginForm">
+                <div class="input-field">
+                    <label for="email">Correo electrónico<span class="required">*</span></label>
+                    <input type="email" id="email" name="email" required placeholder="Correo electrónico">
+                </div>
+                <div class="input-field">
+                    <label for="password">Contraseña <span class="required">*</span></label>
+                    <div class="password-container">
+                        <input type="password" id="password" name="password" required placeholder="Contraseña">
+                        <span id="togglePassword" style="cursor: pointer;">Mostrar</span>
+                    </div>
+                    <a href="">¿Olvidó su contraseña?</a>
+                </div>
+
+                <button type="submit">Iniciar sesión</button>
+            </form>
+            <div class="separator">
+                <div class="line"></div>
+                <p>¿Eres un nuevo cliente?</p>
+                <div class="line"></div>
+            </div>
+            <button id="button-create-cuenta" type="button">Crear cuenta</button>
+        </div>
+    </main>
+    <footer>
+        <div class="footer-container">
+            <div class="footer-left">
+                <p>©2023-2024 Farmacia Medigood S.L.</p>
+            </div>
+            <div class="footer-right">
+                <a href="#">Aviso Legal</a>
+                <a href="#">Política de Cookies</a>
+                <a href="#">Política de Privacidad</a>
+            </div>
+        </div>
+    </footer>
+    <script>
+        document.getElementById('togglePassword').addEventListener('click', function () {
+            var passwordInput = document.getElementById('password');
+            if (passwordInput.type === 'password') {
+                passwordInput.type = 'text';
+                this.textContent = 'Ocultar';
+            } else {
+                passwordInput.type = 'password';
+                this.textContent = 'Mostrar';
+            }
+        });
+    </script>
+</body>
+
+</html>

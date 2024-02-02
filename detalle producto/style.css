@@ -1,0 +1,469 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    color: #4C4C4C;
+    margin: 0;
+    padding: 0;
+    /* Esto añade un margen de 20px a los lados */
+
+}
+
+main {
+    padding: 60px 100px 0px;
+}
+
+main h2 {
+    color: #00A3FF;
+    font-size: 26px;
+    font-weight: 600;
+}
+
+
+section {
+    margin-bottom: 80px;
+}
+
+/* Detalle del producto */
+
+
+.product-detail {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 20px 0 50px ;
+    padding: 40px;
+    /* border: solid 1px red ; */
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+}
+
+.product-image-container {
+    flex: 1;
+    text-align: center;
+    /* border: solid 1px blue ; */
+    width: 100%;
+}
+
+.product-image {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+.product-info-container {
+    flex: 2;
+    padding-left: 60px;
+}
+
+.product-brand,.product-category,.product-description,.product-quantity
+ {
+    color: #707070;
+    font-size: 17px;
+    font-weight: 500;
+    margin-bottom: 8px;
+}
+
+.product-title {
+    color: #016AA6;
+    font-size: 24px;
+    font-weight: 600;
+    margin: 10px 0 40px;
+}
+
+.product-description {
+    font-size: 18px;
+    font-weight: 200;
+    line-height: 1.5;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    text-align: justify;
+    width: 90%;
+}
+
+.product-price {
+    color: #4D4D4D;
+    font-size: 35px;
+    margin-bottom: 25px;
+    font-weight: 700;
+
+}
+
+.product-availability {
+    font-size: 20px;
+    font-weight: 500;
+    margin-bottom: 40px;
+}
+
+.bold-text {
+    font-weight: 600;
+    font-size: 17px;
+}
+
+
+.product-availability.available {
+    color: var(--States-Success, #27aa13);
+}
+
+.product-availability.unavailable {
+    color: red;
+}
+
+.product-action {
+    display: flex;
+    justify-content: space-between;
+    width: 50%;
+    align-content: center;
+}
+.product-quantity-selector {
+    display: flex;
+
+}
+
+.quantity-decrease,
+.quantity-increase {
+    padding: 10px;
+    border: 1px solid #ddd;
+    background-color: rgba(233, 233, 233, 1);
+    cursor: pointer;
+    width: 45px;
+    color: #404040;
+    font-size: 18px;
+    font-weight: bold;
+    
+    
+}
+
+.quantity-input {
+    padding:  8px 0;
+    width: 45px;
+    text-align: center;
+    border: 1px solid #ddd;
+    margin: auto 6px;
+    font-size: 18px;
+    color: #404040;
+
+
+    /* border: solid 1px red ; */
+}
+
+.add-to-cart-button {
+    padding: 10px 20px;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    display: inline-block;
+    text-transform: uppercase;
+    font-weight: bold;
+    background-color: rgba(0, 163, 255, 1);
+}
+
+/* Productos recomendados */
+.products-container {
+    margin: 20px;
+}
+
+.product {
+    flex: 1;
+    display: flex;
+    margin: 0 20px;
+    min-width:250px;
+    max-width: 300px;
+    border: 1px solid #E0E0E0;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+
+}
+
+.products-container-discounts .product {
+    border-left: 1px solid #E0E0E0;
+    border-right: 1px solid #E0E0E0;
+}
+
+.product a {
+    color: inherit;
+    text-decoration: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    padding: 20px 40px;
+    min-height: 400px;
+
+
+}
+
+
+
+a img {
+    width: 100%;
+    height: 150px;
+    border-radius: 16px;
+    margin-bottom: 20px;
+    object-fit: contain;
+
+}
+
+.product a p {
+    font-weight: bold;
+    font-size: 20px;
+
+}
+
+a h3 {
+    margin: 15px 0;
+    text-align: center;
+    color: #00A3FF;
+    font-weight: 500;
+    text-decoration: none;
+    padding: 5px;
+
+}
+
+
+.cart-button {
+    /* Estilos para el botón del carrito de cada producto */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 4px 0 ;
+    width: 80%;
+    background: #00A3FF;
+    color: white;
+    border-radius: 25px;
+    text-decoration: none;
+    margin: 0 auto;
+    cursor: pointer;
+}
+
+.cart-button img {
+    /* Estilos para la imagen del carrito en el botón del carrito */
+    margin-right: 5px;
+}
+
+
+/* Controler del corrousel */
+
+.slick-prev,
+.slick-next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: transparent;
+    border: none;
+    color: #ffffff;
+    /* Cambia esto al color que prefieras para las flechas */
+    border-radius: 5px;
+    background: rgba(196, 196, 196, 0.80);
+    width: 40px;
+    /* par que esté centrado el <> */
+    padding-top: 2px;
+    padding-bottom: 6px;
+    font-size: 2em;
+    /* Cambia esto al tamaño que prefieras para las flechas */
+    z-index: 1;
+    cursor: pointer;
+}
+
+.slick-prev {
+    left: -1em;
+    /* Cambia esto para mover la flecha izquierda más cerca o más lejos del carrusel */
+}
+
+.slick-next {
+    right: -1em;
+    /* Cambia esto para mover la flecha derecha más cerca o más lejos del carrusel */
+}
+
+/* Tamano del <> */
+.slick-prev i,
+.slick-next i {
+    font-size: 0.65em;
+    /* Ajusta este valor según tus necesidades */
+}
+
+
+/* Information */
+.info-container {
+    /* Estilos para el contenedor de puntos */
+    display: flex;
+    justify-content: space-between;
+}
+
+.info-point {
+    /* Estilos para cada punto */
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin:0px  20px;
+    background: #F3F3F3;
+    padding: 20px ;
+    border-radius: 10px;
+}
+
+.info-point img {
+    /* Estilos para la imagen de cada punto */
+    width: 50px;
+    height: 100px;
+}
+
+.bold-text {
+    font-weight: 600;
+    font-size: 17px;
+}
+
+.info-point p:last-child {
+    /* Estilos para el texto normal de cada punto */
+    color: var(--neutrals-neutral-09, #7e7e7e);
+    font-style: normal;
+    font-weight: 200;
+
+
+}
+
+
+
+/* Marcas */
+.brands-container {
+    /* Estilos para el contenedor de marcas */
+    margin: 20px 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.brand {
+    /* Estilos para cada marca */
+    flex: 1 0 calc(100% / 8 - 10px);
+    /* Esto hace que en una línea caben 8 marcas, asumiendo que el margen entre marcas es de 10px */
+    margin: 5px;
+    /* Ajusta este valor según tus necesidades */
+}
+
+.brand img {
+    /* Estilos para la imagen de cada marca */
+    width: 100%;
+    height: auto;
+}
+
+/* Equipo */
+#team {
+    /* Estilos para la sección del equipo */
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.team-description {
+    /* Estilos para la descripción del equipo */
+    width: 30%;
+}
+
+.team-description h2 {
+    /* Estilos para el título de la descripción del equipo */
+    color: #00A3FF;
+    font-size: 24px;
+    font-weight: 600;
+    text-align: center;
+    margin-bottom: 20px;
+
+}
+
+.team-description p {
+    /* Estilos para el texto de la descripción del equipo */
+    text-align: justify;
+    font-size: 16px;
+    font-weight: 200;
+    line-height: 1.5;
+}
+
+.team-members {
+    /* Estilos para el contenedor de miembros del equipo */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 65%;
+}
+
+.team-member {
+    /* Estilos para cada miembro del equipo */
+    flex: 1 0 calc(100% / 4 - 10px);
+    /* Esto hace que en una línea caben 4 miembros del equipo, asumiendo que el margen entre miembros es de 10px */
+    width: 20%;
+
+    display: flex;
+    flex-direction: column;
+
+
+}
+
+.team-member img {
+    /* Estilos para la imagen de cada miembro del equipo */
+    height: 100px;
+    margin: 0 auto 20px;
+}
+
+.team-member h3 {
+    /* Estilos para el nombre de cada miembro del equipo */
+    text-align: center;
+    color: #00A3FF;
+    font-weight: 600;
+    font-size: 18px;
+}
+
+.team-member p {
+    /* Estilos para el cargo de cada miembro del equipo */
+    text-align: center;
+    margin-top: 10px;
+    color: #7e7e7e;
+}
+
+/* Footer */
+/* Controler del corrousel */
+
+.slick-prev,
+.slick-next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: transparent;
+    border: none;
+    color: #ffffff;
+    /* Cambia esto al color que prefieras para las flechas */
+    border-radius: 5px;
+    background: rgba(196, 196, 196, 0.80);
+    width: 40px;
+    /* par que esté centrado el <> */
+    padding-top: 2px;
+    padding-bottom: 6px;
+    font-size: 2em;
+    /* Cambia esto al tamaño que prefieras para las flechas */
+    z-index: 1;
+    cursor: pointer;
+}
+
+.slick-prev {
+    left: -1em;
+    /* Cambia esto para mover la flecha izquierda más cerca o más lejos del carrusel */
+}
+
+.slick-next {
+    right: -1.1em;
+    /* Cambia esto para mover la flecha derecha más cerca o más lejos del carrusel */
+}
+
+/* Tamano del <> */
+.slick-prev i,
+.slick-next i {
+    font-size: 0.65em;
+    /* Ajusta este valor según tus necesidades */
+}

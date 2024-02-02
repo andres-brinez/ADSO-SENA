@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="../../static/style/dashboard.css">
+    <link rel="stylesheet" href="../../static/style/formDashboard.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+    <title>Perfil</title>
+</head>
+
+<body>
+
+    <!-- Barra de navegación superior -->
+    <div class="top-nav">
+        <div class="left-section">
+            <div class="dashboard-icon" onclick="toggleSideNav()">
+                <!-- Icono de dashboard en formato SVG -->
+                <img src="../../static/img/hospital.png" alt="">
+            </div>
+            <div class="brand">MediGood</div>
+        </div>
+        <div class="user">Andres Briñez </div>
+    </div>
+
+    <!-- Contenido del Dashboard -->
+    <div class="dashboard-container">
+
+        <!-- Barra de navegación lateral -->
+        <nav class="side-nav">
+            <ul>
+                <li><a href="#"><i class="fas fa-shopping-cart"></i> Pedidos</a></li>
+                <li><a href="#"><i class="fas fa-shopping-bag"></i> Compras</a></li>
+                <li><a href="#"><i class="fas fa-user"></i> Perfil</a></li>
+                <li><a href="#"><i class="fas fa-users"></i> Usuarios</a></li>
+                <li><a href="#"><i class="fas fa-sign-out-alt"></i> Salir</a></li>
+            </ul>
+        </nav>
+
+        <!-- Contenido principal -->
+        <!-- Contenido principal -->
+        <div class="main-content">
+            <div class="header">
+                <h2 class="title">Perfil</h2>
+                <div class="profile-options">
+                    <p class="tab-ver active-tab">Ver</p>
+                    <p class="tab-editar">Editar</p>
+                </div>
+
+            </div>
+
+            <!-- Contenido de la pestaña "Ver" -->
+            <div id="contenido-ver" class="tab-content">
+                <h3>Información</h3>
+                <div class="profile-info">
+                    
+                    <label for="nombre">Nombre</label>
+                    <p id="nombre">Nombre del Usuario</p>
+
+                    <label for="correo">Correo Electrónico</label>
+                    <p id="correo">correo@example.com</p>
+
+                    <label for="celular">Celular</label>
+                    <p id="celular">123-456-7890</p>
+
+                    <label for="direccion">Dirección</label>
+                    <p id="direccion">Calle 123, Ciudad</p>
+
+                    <label for="identificacion">Número de Identificación</label>
+                    <p id="identificacion">123456789</p>
+
+                    <!-- Agrega más campos de perfil según sea necesario -->
+                </div>
+            </div>
+
+
+            <!-- Contenido de la pestaña "Editar" -->
+            <div id="contenido-editar" class="contenido-tab" style="display: none;">
+                <form id="editar-form" class="edit-form">
+                    <h3>Editar Perfil</h3>
+            
+                    <!-- Campos de información personal -->
+                    <label for="nombre-edit">Nombre</label>
+                    <input type="text" id="nombre-edit" name="nombre-edit" required>
+            
+                    <label for="correo-edit">Correo Electrónico</label>
+                    <input type="email" id="correo-edit" name="correo-edit" required>
+            
+                    <label for="telefono-edit">Teléfono</label>
+                    <input type="tel" id="telefono-edit" name="telefono-edit">
+            
+                    <label for="direccion-edit">Dirección</label>
+                    <input type="text" id="direccion-edit" name="direccion-edit">
+            
+                    <label for="celular-edit">Celular</label>
+                    <input type="tel" id="celular-edit" name="celular-edit">
+            
+                    <label for="identificacion-edit">Número de Identificación</label>
+                    <input type="text" id="identificacion-edit" name="identificacion-edit" >
+            
+                    <!-- Cambiar Contraseña -->
+                    <h3>Cambiar Contraseña</h3>
+            
+                    <label for="current-password-edit">Contraseña Actual:</label>
+                    <input type="password" id="current-password-edit" name="current-password-edit" required>
+            
+                    <label for="new-password-edit">Nueva Contraseña:</label>
+                    <input type="password" id="new-password-edit" name="new-password-edit" required>
+            
+                    <label for="confirm-password-edit">Confirmar Contraseña:</label>
+                    <input type="password" id="confirm-password-edit" name="confirm-password-edit" required>
+            
+                    <button type="submit">Guardar Cambios</button>
+                </form>
+            </div>
+            
+
+
+        </div>
+
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 Medigood - Todos los derechos reservados</p>
+    </footer>
+
+    <script defer src="../../static/js/profile.js"></script>
+
+</body>
+
+</html>

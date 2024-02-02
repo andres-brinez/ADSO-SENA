@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="../../static/style/search.css">
+    <link rel="stylesheet" href="../../static/style/dashboard.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+    <title>Inventario</title>
+</head>
+
+<body>
+
+    <!-- Barra de navegación superior -->
+    <div class="top-nav">
+        <div class="left-section">
+            <div class="dashboard-icon" onclick="toggleSideNav()">
+                <!-- Icono de dashboard en formato SVG -->
+                <img src="../../static/img/hospital.png" alt="">
+            </div>
+            <div class="brand">MediGood</div>
+        </div>
+        <div class="user">Andres Briñez </div>
+    </div>
+
+
+
+    <!-- Contenido del Dashboard -->
+    <div class="dashboard-container">
+
+        <!-- Barra de navegación lateral -->
+        <nav class="side-nav">
+            <ul>
+                <li><a href="#"><i class="fas fa-shopping-cart"></i> Pedidos</a></li>
+                <li><a href="#"><i class="fas fa-box"></i> Inventario</a></li>
+
+                <li><a href="#"><i class="fas fa-shopping-bag"></i> Compras</a></li>
+                <!-- <li><a href="#"><i class="fas fa-chart-bar"></i> Ventas</a></li> -->
+                <li><a href="#"><i class="fas fa-user"></i> Perfil</a></li>
+                <li><a href="#"><i class="fas fa-users"></i> Usuarios</a></li>
+                <li><a href="#"><i class="fas fa-sign-out-alt"></i> Salir</a></li>
+            </ul>
+        </nav>
+
+
+        <!-- Contenido principal -->
+        <div class="main-content">
+            <div class="header">
+                <h2 class="title">Inventario</h2>
+                <!-- Barra de búsqueda -->
+                <div class="search-bar">
+                    <input type="text" placeholder="Buscar por número ">
+                    <button class="search-button">
+                        <img src="../../static/img/lupa.png" alt="">
+                    </button>
+                </div>
+            </div>
+
+            <!-- Botón para ver detalles -->
+            <!-- <button class="detail-button">Ver Detalle</button> -->
+            
+            <!-- Botones de Agregar y Eliminar -->
+            <div class="inventory-buttons">
+                <button class="add-button">Agregar</button>
+                <button class="detalle-button">Ver detalle</button>
+                <button class="edit-button">Editar</button>
+
+            </div>
+            <!-- Tabla de resumen de pedidos -->
+            <table class="table-products">
+                <!-- Encabezados de la tabla -->
+                <thead>
+                    <tr>
+                        <th></th>
+                        <th>Número</th>
+                        <th>Producto</th>
+                        <th>Cantidad Disponible</th>
+                        <th>Valor Unitario</th>
+                        <th>Fecha de Ingreso</th>
+                        <th>Estado</th>
+                    </tr>
+                </thead>
+                <!-- Contenido de la tabla -->
+                <tbody>
+                    <tr>
+                        <td><input type="checkbox" id="producto001"></td>
+                        <td>001</td>
+                        <td>Producto 1</td>
+                        <td>100</td>
+                        <td>$10.00</td>
+                        <td>2024-01-27</td>
+                        <td>Disponible</td>
+                    </tr>
+                    <tr>
+                        <td><input type="checkbox" id="producto002"></td>
+                        <td>002</td>
+                        <td>Producto 2</td>
+                        <td>75</td>
+                        <td>$15.00</td>
+                        <td>2024-01-28</td>
+                        <td>Disponible</td>
+                    </tr>
+                    <tr>
+                        <td><input type="checkbox" id="producto001"></td>
+                        <td>001</td>
+                        <td>Producto 1</td>
+                        <td>100</td>
+                        <td>$10.00</td>
+                        <td>2024-01-27</td>
+                        <td>Disponible</td>
+                    </tr>
+                    <tr>
+                        <td><input type="checkbox" id="producto002"></td>
+                        <td>002</td>
+                        <td>Producto 2</td>
+                        <td>75</td>
+                        <td>$15.00</td>
+                        <td>2024-01-28</td>
+                        <td>Oculto</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <!-- Paginación de la tabla -->
+            <div class="pagination">
+                <div class="pagination-options">
+                <button>Anterior</button>
+                <span>1</span>
+                <span>2</span>
+                <span>3</span>
+                <span>4</span>
+                <span>...</span>
+                <button>Siguiente</button>
+                </div>
+                <button class="show-all-button">Mostrar Todos</button>
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 Medigood - Todos los derechos reservados</p>
+    </footer>
+
+</body>
+
+</html>

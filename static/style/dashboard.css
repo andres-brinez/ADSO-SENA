@@ -1,0 +1,253 @@
+/* Estilos generales para el dashboard */
+/* Reset de Estilos */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estilos Generales */
+body {
+    font-family: Arial, sans-serif;
+    color: #4C4C4C;
+    margin: 0;
+    padding: 0;
+}
+
+/* Barra de Navegación Superior */
+.top-nav {
+    background-color: #00A3FF;
+    padding: 15px 4vh;
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%; /* Hacer que la barra ocupe todo el ancho */
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000; /* Asegurar que esté sobre otros elementos */
+}
+
+.top-nav .left-section {
+    display: flex;
+    align-items: center;
+}
+
+.top-nav .brand {
+    font-size: 1.5em;
+    font-weight: bold;
+    color: #fff; /* Cambiado el color del texto a blanco */
+}
+
+.top-nav .user {
+    color: #fff;
+}
+
+.top-nav .dashboard-icon img {
+    width: 40px;
+    height: 40px;
+    margin-right: 10px; /* Ajusta el espacio entre la imagen y el texto de la marca */
+}
+
+
+/* Contenido del Dashboard */
+.dashboard-container {
+    display: flex;
+}
+
+/* Barra de Navegación Lateral */
+.side-nav {
+    width: 200px;
+    height: 100vh;
+    background-color: #1A2226; /* Color de la barra lateral */
+    color: #fff;
+    padding: 5px 12px ;
+    position: fixed;
+    left: 0px;
+    top: 0;
+    display: flex;
+    flex-direction: column;
+    padding-top: 120px;
+}
+
+.side-nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.side-nav li {
+    margin-bottom:25px;
+}
+
+.side-nav a {
+    color: #fff;
+    text-decoration: none;
+    padding: 10px;
+    background-color: #2A343A;
+    border-radius: 5px;
+    width: 100%;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+    transition: background-color 0.3s ease;
+}
+
+
+.side-nav a i {
+    margin-right: 10px;
+}
+
+.side-nav a:hover {
+    background-color: #1A2227; /* Color de fondo cuando el ítem está seleccionado */
+
+}
+
+.side-nav a::before {
+    content: '';
+    width: 6px;
+    height: 100%;
+    background-color: #2174C9; /* Color del borde izquierdo */
+    position: absolute;
+    left: 0;
+    top: 0;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    transform: scaleX(0); /* Inicia con ancho cero */
+    transition: transform 0.3s ease; /* Transición suave del ancho */
+}
+
+/* Transición al cerrar la barra de navegación */
+.side-nav:not(.open) {
+    transition: left 0.3s ease; /* Agrega la transición al cerrar */
+}
+
+.side-nav a:hover::before {
+    transform: scaleX(1); /* Aumenta el ancho a 1 durante la transición */
+}
+
+
+/* Contenido Principal del Dashboard */
+.main-content {
+    flex: 1;
+    padding:120px 50px 50px;
+    margin-left: 200px; /* Ancho de la barra lateral */
+    flex-grow: 1;
+    min-height: 95vh;
+    background-color: #f0f0f0; 
+
+}
+
+.header{
+    border-bottom: solid 1px rgb(205, 201, 201) ;
+    margin-bottom: 25px;
+    padding-bottom: 10px;
+
+
+}
+
+.title {
+    font-size: 30px;
+    font-weight: 600;
+    margin: 0; /* Elimina el margen predeterminado del h2 */
+}
+
+
+/* Tabla de los productos*/
+
+table caption {
+    font-size: 25px; /* Cambia el tamaño de la fuente */
+    color: #333; /* Cambia el color del texto */
+    font-weight: bold; /* Hace que el texto sea negrita */
+    text-align:left;
+    padding: 10px; /* Agrega un relleno alrededor del texto */
+    background-color: #f2f2f2; /* Cambia el color de fondo */
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra para resaltar la tabla */
+}
+
+table th, table td {
+    border: 1px solid #ddd;
+    padding: 15px;
+    text-align: center;
+}
+
+table tfoot{
+    background: #E8EBFD;
+    font-weight: bold;
+    
+}
+
+table tfoot td:first-child {
+    font-size: 18px;
+}
+
+/* Estilos para filas impares */
+table tbody tr:nth-child(odd) {
+    background-color: #f9f9f9; /* Color de fondo para filas impares */
+}
+
+/* Paginacion */
+.pagination {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 40px;
+}
+
+.pagination-options {
+    display: flex;
+    align-items: center;
+}
+
+.pagination-options button, .pagination-options span {
+    padding: 8px 15px;
+    background-color: #fff;
+    color: #00A3FF;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-right: 5px;
+}
+
+.pagination-options button:hover {
+    background-color: #0056b3;
+}
+
+.show-all-button {
+    padding: 8px 15px;
+    background-color: #28a745;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-left: 10px;
+}
+
+.show-all-button:hover {
+    background-color: #218838;
+}
+
+
+
+
+
+/* Footer */
+footer {
+    padding: 20px 0;
+    background-color: #00A3FF;
+    color: #fff;
+    text-align: center;
+    margin-top: auto; /* Coloca el footer al final del contenedor principal */
+    width: 90%;
+    margin-left: auto;
+}
