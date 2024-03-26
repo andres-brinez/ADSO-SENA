@@ -7,6 +7,7 @@ package conexion;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
+import java.sql.ResultSet;
 import java.sql.PreparedStatement;
 import javax.swing.JOptionPane;
 
@@ -36,17 +37,51 @@ public class conexionMysql {
         return cn;
     }
     
-    public void ejecutarConsulta(String consulta) {
+    public ResultSet ejecutarConsultaConRetorno(String consulta,String mensaje) {
+        
+        
+        ResultSet resultado=null;
+        
         try {
             PreparedStatement ps = cn.prepareStatement(consulta);
-            ps.execute();
-            JOptionPane.showMessageDialog(null,"Usuario Registrado");
+            resultado=ps.executeQuery();
+            
+            if(!mensaje.equals("")){
+                
+                JOptionPane.showMessageDialog(null,mensaje);
+            }
+            
+                       
+            
                     
         } catch (SQLException e) {
-            JOptionPane.showMessageDialog(null,"No se pudo reigstrar el usuario");
+            JOptionPane.showMessageDialog(null,"No se pudo realizar la acción");
             System.out.println("Error al ejecutar la consulta: " + e);
             
         }
+        
+        return resultado;
+    }
+    
+    public void ejecutarConsultaSinRetorno(String consulta,String mensaje) {
+                
+        try {
+            PreparedStatement ps = cn.prepareStatement(consulta);
+            ps.execute();
+            
+            if(!mensaje.equals("")){
+                
+                JOptionPane.showMessageDialog(null,mensaje);
+            }
+                                  
+            
+                    
+        } catch (SQLException e) {
+            JOptionPane.showMessageDialog(null,"No se pudo realizar la acción");
+            System.out.println("Error al ejecutar la consulta: " + e);
+            
+        }
+        
     }
  }
     
