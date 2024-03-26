@@ -31,7 +31,7 @@ public class ConexionMysql {
         catch(ClassNotFoundException | SQLException e ){
             
             System.out.println("Error conexión DB "+ e);
-            JOptionPane.showMessageDialog(null,"Error en la base de datos, asegurate de que los datos para la conexión sea correctos");
+            JOptionPane.showMessageDialog(null,"Error en la base de datos, asegurate de que los datos para la conexión sean correctos");
 
  
         }
