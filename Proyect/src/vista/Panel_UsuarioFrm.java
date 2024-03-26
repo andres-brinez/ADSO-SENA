@@ -4,11 +4,15 @@
  */
 package vista;
 
+
 /**
  *
  * @author brine
  */
 public class Panel_UsuarioFrm extends javax.swing.JDialog {
+    
+    
+    public static GestionarProductosFrm gestionarProductosFrm;
 
     /**
      * Creates new form Panel_UusarioFrm
@@ -18,6 +22,8 @@ public class Panel_UsuarioFrm extends javax.swing.JDialog {
     public Panel_UsuarioFrm(java.awt.Frame parent, boolean modal) {
         super(parent, modal);
         initComponents();
+        setLocationRelativeTo(null);
+
     }
     
     public void changueNameUser(String nameUser){
@@ -49,6 +55,11 @@ public class Panel_UsuarioFrm extends javax.swing.JDialog {
 
         jButton1.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         jButton1.setText("Gestionar productos");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -72,6 +83,16 @@ public class Panel_UsuarioFrm extends javax.swing.JDialog {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        // TODO add your handling code here:
+        
+        dispose();
+        
+        gestionarProductosFrm= new GestionarProductosFrm(null,true);
+        gestionarProductosFrm.setVisible(true);
+        
+    }//GEN-LAST:event_jButton1ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -116,6 +137,6 @@ public class Panel_UsuarioFrm extends javax.swing.JDialog {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButton1;
-    private javax.swing.JLabel txtNameUser;
+    public javax.swing.JLabel txtNameUser;
     // End of variables declaration//GEN-END:variables
 }
