@@ -2,7 +2,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JDialog.java to edit this template
  */
-package principal;
+package vista;
 
 /**
  *
@@ -37,27 +37,37 @@ public class Panel_UsuarioFrm extends javax.swing.JDialog {
     private void initComponents() {
 
         txtNameUser = new javax.swing.JLabel();
+        jButton1 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
 
-        txtNameUser.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        txtNameUser.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         txtNameUser.setForeground(new java.awt.Color(255, 0, 0));
         txtNameUser.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         txtNameUser.setText("jLabel1");
         txtNameUser.setToolTipText("");
 
+        jButton1.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        jButton1.setText("Gestionar productos");
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(txtNameUser, javax.swing.GroupLayout.DEFAULT_SIZE, 400, Short.MAX_VALUE)
+            .addComponent(txtNameUser, javax.swing.GroupLayout.DEFAULT_SIZE, 465, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addGap(148, 148, 148)
+                .addComponent(jButton1)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addGap(31, 31, 31)
                 .addComponent(txtNameUser)
-                .addContainerGap(249, Short.MAX_VALUE))
+                .addGap(30, 30, 30)
+                .addComponent(jButton1)
+                .addContainerGap(49, Short.MAX_VALUE))
         );
 
         pack();
@@ -105,6 +115,7 @@ public class Panel_UsuarioFrm extends javax.swing.JDialog {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton jButton1;
     private javax.swing.JLabel txtNameUser;
     // End of variables declaration//GEN-END:variables
 }

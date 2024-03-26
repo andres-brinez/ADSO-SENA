@@ -2,10 +2,10 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JDialog.java to edit this template
  */
-package principal;
+package vista;
 
 import java.sql.Connection;
-import conexion.conexionMysql;
+import modelo.ConexionMysql;
 import javax.swing.JOptionPane;
 
 
@@ -15,11 +15,11 @@ import javax.swing.JOptionPane;
  */
 public class RegisterFrm extends javax.swing.JDialog {
     
-    conexion.conexionMysql con = new conexionMysql();
+    modelo.ConexionMysql con = new ConexionMysql();
     Connection  cn = con.conectar();
     
 
-    /**
+    /*
      * Creates new form RegisterFrml
      */
     public RegisterFrm(java.awt.Frame parent, boolean modal) {
@@ -175,6 +175,7 @@ public class RegisterFrm extends javax.swing.JDialog {
 
             con.ejecutarConsultaSinRetorno(consulta,"Usuario Registrado");
             limpiar();
+            dispose(); // cierra el modal
      
         }
 

@@ -2,10 +2,10 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JDialog.java to edit this template
  */
-package principal;
+package vista;
 
-import conexion.conexionMysql;
-import java.sql.*
+import modelo.ConexionMysql;
+import java.sql.*;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.swing.JOptionPane;
@@ -18,7 +18,7 @@ public class LoginFrm extends javax.swing.JDialog {
 
     public static RegisterFrm fr;
     
-    conexion.conexionMysql con = new conexionMysql();
+    modelo.ConexionMysql con = new ConexionMysql();
     Connection  cn = con.conectar();
     
     public LoginFrm(java.awt.Frame parent, boolean modal) {
