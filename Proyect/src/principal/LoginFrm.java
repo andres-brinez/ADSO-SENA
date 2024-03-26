@@ -4,15 +4,23 @@
  */
 package principal;
 
+import conexion.conexionMysql;
+import java.sql.*
+import java.util.logging.Level;
+import java.util.logging.Logger;
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author brine
  */
 public class LoginFrm extends javax.swing.JDialog {
 
-    
-  
     public static RegisterFrm fr;
+    
+    conexion.conexionMysql con = new conexionMysql();
+    Connection  cn = con.conectar();
+    
     public LoginFrm(java.awt.Frame parent, boolean modal) {
         super(parent, modal);
         initComponents();
@@ -133,7 +141,49 @@ public class LoginFrm extends javax.swing.JDialog {
 
     private void btnLoginActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnLoginActionPerformed
         // TODO add your handling code here:
-        System.out.println("hola");
+        
+        String usuario = txtUsuario.getText();
+        String password = txtPassword.getText();
+        
+        if (!usuario.isEmpty()||!password.isEmpty()){
+            
+            String consulta = "SELECT * FROM app.usuarios where email='"+usuario+"' and password='"+password+"'";
+            
+            ResultSet resultado =    con.ejecutarConsultaConRetorno(consulta, "");
+            
+            try {
+                // si se encuentra el usuario
+                if (resultado.next()){
+                    
+                    String nombre = resultado.getString("nombre");
+                    dispose(); // cierra el modal
+                    
+                    Panel_UsuarioFrm panelUsuario = new Panel_UsuarioFrm(null,true);
+                  
+                    panelUsuario.changueNameUser(nombre);
+                    panelUsuario.setVisible(true);
+                    
+                    
+                }
+                // si no se encuentra el usuario
+                else{
+                    
+                    JOptionPane.showMessageDialog(null,"Usuario o contraseña incorrecta");
+
+                }
+            } catch (SQLException ex) {
+                Logger.getLogger(LoginFrm.class.getName()).log(Level.SEVERE, null, ex);
+            }
+            
+        }
+        else{
+       
+            JOptionPane.showMessageDialog(null,"Debe Completar los datos");
+       
+        }
+
+        
+        
     }//GEN-LAST:event_btnLoginActionPerformed
 
     /**
