@@ -173,7 +173,7 @@ public class RegisterFrm extends javax.swing.JDialog {
         else{
             String consulta = "INSERT INTO `app`.`usuarios`(`nombre`,`apellido`,`email`,`password`)VALUES('"+nombre+"', '"+apellido+"', '"+email+"', '"+password+"')";
 
-            con.ejecutarConsulta(consulta);
+            con.ejecutarConsultaSinRetorno(consulta,"Usuario Registrado");
             limpiar();
      
         }
