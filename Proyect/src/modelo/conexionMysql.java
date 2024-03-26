@@ -24,13 +24,15 @@ public class ConexionMysql {
         
         try{
             Class.forName("com.mysql.cj.jdbc.Driver");
-            cn =(Connection) DriverManager.getConnection("jdbc:mysql://localhost/app", "root", "admin");
+            cn =(Connection) DriverManager.getConnection("jdbc:mysql://localhost/appp", "root", "admin");
             System.out.println("conectado");
             
         }
         catch(ClassNotFoundException | SQLException e ){
             
             System.out.println("Error conexión DB "+ e);
+            JOptionPane.showMessageDialog(null,"Error en la base de datos, asegurate de que los datos para la conexión sea correctos");
+
  
         }
         
