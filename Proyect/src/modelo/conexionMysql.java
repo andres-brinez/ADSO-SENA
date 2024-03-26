@@ -24,7 +24,7 @@ public class ConexionMysql {
         
         try{
             Class.forName("com.mysql.cj.jdbc.Driver");
-            cn =(Connection) DriverManager.getConnection("jdbc:mysql://localhost/appp", "root", "admin");
+            cn =(Connection) DriverManager.getConnection("jdbc:mysql://localhost/app", "root", "admin");
             System.out.println("conectado");
             
         }
