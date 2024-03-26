@@ -155,7 +155,7 @@ public class LoginFrm extends javax.swing.JDialog {
                 // si se encuentra el usuario
                 if (resultado.next()){
                     
-                    String nombre = resultado.getString("nombre");
+                        String nombre = resultado.getString("nombre");
                     dispose(); // cierra el modal
                     
                     Panel_UsuarioFrm panelUsuario = new Panel_UsuarioFrm(null,true);
